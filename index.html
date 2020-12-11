@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
+    <title>Frontend Mentor | Single Price Grid Component</title>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        :root {
+            --cyan: hsl(179, 62%, 43%);
+            --light-cyan: hsl(184, 65%, 47%);
+            --bright-yellow: hsl(71, 73%, 54%);
+            --light-bright-yellow: hsl(81, 83%, 64%);
+            --light-gray: hsl(204, 43%, 93%);
+            --grayish-blue: hsl(218, 22%, 67%);
+        }
+        body {
+            font-family: 'Karla', sans-serif;
+            font-size: 16px;
+            background-color: var(--light-gray);
+        }
+        .container {
+            width: 864px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .left, .right {
+            padding: 40px;
+            float: left;
+            width: 50%;
+            box-sizing: border-box;
+            color: white;
+            height: 290px;
+        }
+        .left {
+            background-color: var(--cyan);
+        }
+        .right {
+            background-color: var(--light-cyan);
+            padding-right: 170px;
+        }
+        header h2 {
+            color: var(--bright-yellow);
+        }
+        header p {
+            color: var(--grayish-blue);
+        }
+        p {
+            line-height: 22px;
+        }
+        h1 {
+            padding-bottom: 30px;
+            color: var(--cyan);
+        }
+        h2 {
+            padding-bottom: 20px;
+        }
+        header {
+            padding: 40px;
+            background-color: white;
+            height: 160px;
+        }
+        button {
+            background-color: var(--bright-yellow);
+            width: 100%;
+            padding: 15px;
+            outline: none;
+            font-weight: 700;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            border: none;
+            margin-top: 26px;
+        }
+        button:hover {
+            background-color: var(--light-bright-yellow);
+        }
+        .small, p {
+            color: hsl(204, 43%, 93%);
+        }
+        .left p {
+            line-height: 46px;
+        }
+        .big {
+            font-weight: 700;
+            font-size: 32px;
+        }
+        .attribution { 
+            font-size: 11px; 
+            text-align: center; 
+            color: black; 
+        }
+        .attribution a { 
+            color: hsl(228, 45%, 44%); 
+        }
+        @media screen and (max-height: 470px) {
+            .container {
+                top: 5vw;
+                transform: translate(-50%, 0);
+            }
+        }
+        @media screen and (max-width: 960px) {
+            .container {
+                width: 90vw;
+                top: 5vw;
+                transform: translate(-50%, 0);
+            }
+            .left, .right, .attribution {
+                clear: both;
+                width: 90vw;
+            }
+        }
+        @media screen and (max-width: 640px) {
+            header {
+                height: 220px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <header>
+                <h1>Join our community</h1>
+                <h2>30-day, hassle-free money back guarantee</h2>
+                <p>Gain access to our full library of tutorials along with expert code reviews. 
+                Perfect for any developers who are serious about honing their skills.</p>
+            </header>
+            <section>
+                <div class="left">
+                    <h2>Monthly Subscription</h2>    
+                    <span class="big">&dollar;29</span>
+                    <span class="small">per month</span>
+                    <p>Full access for less than &dollar;1 a day</p>
+                    <button>Sign Up</button>
+                </div>
+            </section>
+            <section>
+                <div class="right">
+                    <h2>Why Us</h2> 
+                    <p>Tutorials by industry experts
+                    Peer &amp; expert code review
+                    Coding exercises
+                    Access to our GitHub repos
+                    Community forum
+                    Flashcard decks
+                    New videos every week</p>
+                </div>
+            </section>
+            <footer>
+                <p class="attribution">
+                    Challenge by <a href="https://www.frontendmentor.io?ref=challenge"    target="_blank">Frontend Mentor</a>. 
+                    Coded by <a href="https://www.frontendmentor.io/profile/Vadgame">
+                    Dominik</a>.
+                </p>
+            </footer>
+        </div>
+    </main>
+</body>
+</html>
